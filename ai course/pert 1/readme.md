@@ -20,5 +20,6 @@ versi paket utama
 - transformers        : 4.56.2
 - fastapi             : 0.117.1
 
-Pert 1: install venv
-Pert 2: 
+Pert 1: 
+- install venv
+- verify installation
