@@ -23,3 +23,4 @@ versi paket utama
 Pert 1: 
 - install venv
 - verify installation
+- setup check

@@ -7,5 +7,4 @@ kelas : 5PSIA
 pert 1 : 
 - install venv
 - verify installation
-
-
+- setup check
