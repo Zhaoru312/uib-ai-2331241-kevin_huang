@@ -8,3 +8,8 @@ pert 1 :
 - install venv
 - verify installation
 - setup check
+
+pert 2 : 
+- fuzzy logic
+- models training
+- result
