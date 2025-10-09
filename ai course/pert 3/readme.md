@@ -20,7 +20,6 @@ versi paket utama
 - transformers        : 4.56.2
 - fastapi             : 0.117.1
 
-Pert 2: 
-- fuzzy logic
-- models training
-- result
+pert 3 : 
+- linear regression
+-
