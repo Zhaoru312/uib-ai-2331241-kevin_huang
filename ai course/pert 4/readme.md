@@ -20,6 +20,6 @@ versi paket utama
 - transformers        : 4.56.2
 - fastapi             : 0.117.1
 
-pert 3 : 
+pert 4 : 
 - linear regression
-- price prediction
+-

@@ -13,3 +13,9 @@ pert 2 :
 - fuzzy logic
 - models training
 - result
+
+pert 3 : 
+- linear regression
+- price prediction
+
+pert 4 :
