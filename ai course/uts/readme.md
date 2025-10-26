@@ -20,6 +20,6 @@ versi paket utama
 - transformers        : 4.56.2
 - fastapi             : 0.117.1
 
-pert 4 : 
-- linear regression
-- price prediction
+uts: 
+- Fuzzy Logic-Based Expert System for Adaptive Cruise Control in cars
+- Linear Regression Design for Vehicle Fuel Efficiency Prediction

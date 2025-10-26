@@ -1,0 +1,15 @@
+source dataset yang dipakai untuk menjawab soal
+------------------------------------------
+
+Soal 1:
+https://data.jrc.ec.europa.eu/dataset/9702c950-c80f-4d2f-982f-44d06ea0009f
+
+(buka url dan di data access ada url untuk dataset)
+(memakai folder /casale part 3)
+
+
+------------------------------------------
+
+Soal 2: https://www.kaggle.com/datasets/ahmettyilmazz/fuel-consumption/data
+
+------------------------------------------

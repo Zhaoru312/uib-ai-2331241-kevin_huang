@@ -19,3 +19,5 @@ pert 3 :
 - price prediction
 
 pert 4 :
+- linear regression
+- price prediction
