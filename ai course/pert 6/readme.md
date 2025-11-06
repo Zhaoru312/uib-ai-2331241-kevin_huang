@@ -20,10 +20,6 @@ versi paket utama
 - transformers        : 4.56.2
 - fastapi             : 0.117.1
 
-pert 5 : 
+pert 6 : 
 - sentiment analysis
--- models
--- LogisticRegression
--- RandomForest
--- SupportVectorMachine
--- XGBoost
+-- lstm

@@ -21,3 +21,15 @@ pert 3 :
 pert 4 :
 - linear regression
 - price prediction
+
+pert 5 : 
+- sentiment analysis
+-- models
+-- LogisticRegression
+-- RandomForest
+-- SupportVectorMachine
+-- XGBoost
+
+pert 6 : 
+- sentiment analysis
+-- lstm
