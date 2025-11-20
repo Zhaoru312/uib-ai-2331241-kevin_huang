@@ -1,4 +1,8 @@
 # Configure TensorFlow to use GPU with mixed precision if available
+import tensorflow as tf
+import logger
+import os
+
 physical_devices = tf.config.list_physical_devices('GPU')
 gpu_available = bool(physical_devices)
 
