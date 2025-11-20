@@ -22,4 +22,7 @@ versi paket utama
 - imblearn            : 0.14.0 
 - shap                : 0.42.1
 
+using tensorflow gpu (linu)
+
 pert 7 : 
+-- brain tumor detections
