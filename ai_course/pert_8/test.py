@@ -1,48 +1,51 @@
 import cv2
 from ultralytics import YOLO
 import time
+import os
 
-model = YOLO("yolov8n.pt", device='gpu') 
-# model = YOLO("yolov8n.pt")
+model = YOLO("models/traffic_sign_v1.pt") 
 
-# rtsp_url = "rtsp://admin:Qwerty!@@10.10.4.217:554/Streaming/Channels/101?transportmode=unicast&profile=Profile_1"
+source = "3.png"  #source gambar/video
 
-# cap = cv2.VideoCapture(rtsp_url)
-cap = cv2.VideoCapture(0)
+# Detect if source is image or video
+is_image = os.path.splitext(source)[1].lower() in [".jpg", ".png", ".jpeg", ".bmp"]
 
-if not cap.isOpened():
-    print("Username atau password RTSP salah")
+if is_image:
+    img = cv2.imread(source)
+    results = model(img)
+    annotated = results[0].plot()
+    cv2.imshow("Result", annotated)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
     exit()
 
-prev_time = time.time()
+# Otherwise: Video mode
+cap = cv2.VideoCapture(source) # 0 untuk facecam
+
+if not cap.isOpened():
+    print("Gagal membuka video / RTSP")
+    exit()
+
+prev = time.time()
 
 while True:
-    success, frame = cap.read()
+    ret, frame = cap.read()
+    if not ret:
+        print("Gagal membaca frame. mencoba lagi...")
+        break
 
-    if not success or frame is None:
-        print("Gagal membaca frame. coba lagi...")
-        cap.release()
-        time.sleep(1)
-        cap = cv2.VideoCapture(0)
-        continue
+    now = time.time()
+    fps = 1 / (now - prev)
+    prev = now
 
-    # Hitung FPS
-    current_time = time.time()
-    fps = 1 / (current_time - prev_time)
-    prev_time = current_time
+    results = model(frame, device=0)
+    annotated = results[0].plot()
 
-    # YOLO inference
-    results = model(frame,device=0)
-    annotated_frame = results[0].plot()
-
-    # Tambahkan FPS ke video
-    cv2.putText(annotated_frame, f"FPS: {int(fps)}", (10, 60),
+    cv2.putText(annotated, f"FPS: {int(fps)}", (10, 60),
                 cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
 
-    # Tampilkan hasil
-    cv2.imshow("YOLO RTSP CCTV Inference", annotated_frame)
+    cv2.imshow("YOLO Detection", annotated)
 
-    # Tekan 'q' untuk keluar
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 

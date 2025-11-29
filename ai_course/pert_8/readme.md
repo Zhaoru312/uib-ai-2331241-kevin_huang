@@ -41,5 +41,5 @@ versi paket utama
 - urllib3               ==2.5.0
 
 pert 8 : 
--- yolo10 
+-- yolo8
 -- object detection

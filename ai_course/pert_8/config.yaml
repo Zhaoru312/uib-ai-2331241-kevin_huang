@@ -1,30 +1,47 @@
-path: C:\Users\Malv\Downloads\class\ai lab\ai course\pert 8 #root
-train: dataset/car/train/images #training
-val: dataset/car/valid/images #validity
-test: dataset/car/test/images #testing
+path: C:/Users/Malv/Downloads/class/ai_lab/ai_course/pert_8 #root
+train: dataset/train/images #training
+val: dataset/valid/images #validity
+test: dataset/test/images #testing
 
 
 # classes
 names: 
-  0: Green Light, 
-  1: Red Light, 
-  2: Speed Limit 10, 
-  3: Speed Limit 20, 
-  4: Speed Limit 30, 
-  5: Speed Limit 40, 
-  6: Speed Limit 50, 
-  7: Speed Limit 60, 
-  8: Speed Limit 70, 
-  9: Speed Limit 80, 
-  10: Speed Limit 90,
-  11: Speed Limit 100, 
-  12: Speed Limit 110, 
-  13: Speed Limit 120, 
-  14: Stop
+ - Balai Pertolongan Pertama
+ - Banyak Anak-Anak
+ - Dilarang Belok Kanan
+ - Dilarang Berhenti
+ - Dilarang Berjalan Terus
+ - Dilarang Masuk
+ - Dilarang Mendahului
+ - Dilarang Parkir
+ - Dilarang Putar Balik
+ - Gereja
+ - Hati-Hati
+ - Jalur Penyebrangan
+ - Lampu Lalu Lintas
+ - Larangan Kecepatan - 30km-jam
+ - Larangan Kecepatan - 40km-jam
+ - Larangan Kendaraan MST - 10 Ton
+ - Masjid
+ - Pemberhentian Bus
+ - Perintah Ikuti Bundaran
+ - Perintah Jalur Sepeda
+ - Perintah Lajur Kiri
+ - Perintah Pilih Satu Jalur
+ - Persimpangan 3 Prioritas
+ - Persimpangan 3 Sisi Kanan Prioritas
+ - Persimpangan 3 Sisi Kiri Prioritas
+ - Persimpangan Empat
+ - Putar Balik
+ - Rumah Sakit
+ - SPBU
+ - Tempat Parkir
 
 roboflow:
-  workspace: selfdriving-car-qtywx
-  project: self-driving-cars-lfjou
-  version: 6
+  workspace: putri-mawaring-wening-lwwcx
+  project: traffic-sign-in-indonesia-detection
+  version: 3
   license: CC BY 4.0
-  url: https://universe.roboflow.com/selfdriving-car-qtywx/self-driving-cars-lfjou/dataset/64
+  url: https://universe.roboflow.com/putri-mawaring-wening-lwwcx/traffic-sign-in-indonesia-detection/dataset/3
+
+  
