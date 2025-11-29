@@ -1,3 +1,5 @@
 /.env
 /ai-venv
-ai_course/pert_8/yolov10-env
+/ai_course/pert_7/dataset
+/ai_course/pert_8/dataset
+/ai_course/pert_8/models
