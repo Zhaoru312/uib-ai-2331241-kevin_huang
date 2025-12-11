@@ -5,7 +5,7 @@ import os
 
 model = YOLO("models/traffic_sign_v1.pt") 
 
-source = "testing/6.png"  #source gambar/video
+source = "testing/Belajar Mengenal Rambu Lalu Lintas _ Rambu Lalu Lintas dan Artinya _ Video Edukasi.mp4"  #source gambar/video
 
 # Detect if source is image or video
 is_image = os.path.splitext(source)[1].lower() in [".jpg", ".png", ".jpeg", ".bmp"]

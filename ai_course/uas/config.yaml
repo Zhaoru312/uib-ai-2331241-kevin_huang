@@ -1,0 +1,21 @@
+path: C:/Users/Malv/Downloads/class/ai_lab/ai_course/uas #root
+train: dataset/train/images #training
+val: dataset/valid/images #validity
+test: dataset/test/images #testing
+
+# Classes
+names: 
+- angry
+- happy
+- neutral
+- sad
+- surprised
+
+roboflow:
+  workspace: facial-emotion-hvq59
+  project: yolo-face-detection-rznsd
+  version: 22
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/facial-emotion-hvq59/yolo-face-detection-rznsd/dataset/22
+
+   
