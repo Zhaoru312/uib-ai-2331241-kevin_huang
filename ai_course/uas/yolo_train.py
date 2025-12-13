@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     results = model.train(
         data="config.yaml",
-        epochs=10,
+        epochs=50,
         device=0,
     )
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     existing = [
         f for f in os.listdir(model_dir)
-        if re.match(r"emotion_detect_v\d+\.pt", f)
+        if re.match(r"Face_detect_v\d+\.pt", f)
     ]
 
     if existing:
@@ -30,7 +30,7 @@ if __name__ == "__main__":
         next_version = 1
 
     # model version
-    dst = f"{model_dir}/emotion_detect_v{next_version}.pt"
+    dst = f"{model_dir}/Face_detect_v{next_version}.pt"
     shutil.copy(src, dst)
 
     print(f"Saved trained model as: {dst}")

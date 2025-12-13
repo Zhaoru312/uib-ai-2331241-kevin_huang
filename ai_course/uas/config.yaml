@@ -1,21 +1,18 @@
 path: C:/Users/Malv/Downloads/class/ai_lab/ai_course/uas #root
-train: dataset/train/images #training
-val: dataset/valid/images #validity
-test: dataset/test/images #testing
+train: yolo_dataset/train/images #training
+val: yolo_dataset/valid/images #validity
+test: yolo_dataset/test/images #testing
 
-# Classes
+# classes
 names: 
-- angry
-- happy
-- neutral
-- sad
-- surprised
+- device
+- live
+- mask
+- photo
 
 roboflow:
-  workspace: facial-emotion-hvq59
-  project: yolo-face-detection-rznsd
-  version: 22
+  workspace: zongrui-liu
+  project: face-nni0m
+  version: 5
   license: CC BY 4.0
-  url: https://universe.roboflow.com/facial-emotion-hvq59/yolo-face-detection-rznsd/dataset/22
-
-   
+  url: https://universe.roboflow.com/zongrui-liu/face-nni0m/dataset/5

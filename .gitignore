@@ -4,6 +4,7 @@
 /ai_course/pert_8/dataset
 /ai_course/pert_8/models
 /ai_course/pert_8/runs
-/ai_course/uas/dataset
+/ai_course/uas/Neutral_Dataset
+/ai_course/uas/Yolo_Dataset
 /ai_course/uas/models
 /ai_course/uas/runs
