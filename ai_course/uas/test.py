@@ -12,14 +12,15 @@ from collections import deque
 # YOLO face detector
 face_model = YOLO("models/Face_detect_v1.pt")
 
-# Emotion classifier (NO custom loss needed)
+# Emotion classifier
 emotion_model = load_model("models/emotion_model_v2.keras")
 
-# MUST match training folder order
+# Label
 emotion_labels = ["Angry", "Happy", "Neutral", "Sad"]
 
 IMG_SIZE = 96
-# Temporal smoothing buffer (for stable predictions)
+
+# Temporal smoothing buffer
 pred_buffer = deque(maxlen=7)
 
 # ==========================================================
@@ -41,14 +42,14 @@ def classify_emotion(face_img):
     pred = emotion_model.predict(face_img, verbose=0)[0]
     pred_buffer.append(pred)
 
-    # Temporal smoothing: average over last N predictions
+    # Temporal smoothing
     smoothed_pred = np.mean(np.array(pred_buffer), axis=0)
 
     idx = np.argmax(smoothed_pred)
     confidence = float(smoothed_pred[idx])
 
-    # Apply confidence threshold: below 0.5 → Neutral
-    if confidence < 0.5:
+    # Apply confidence threshold: below 0.4 → Neutral
+    if confidence < 0.4:
         idx = emotion_labels.index("Neutral")
         confidence = float(smoothed_pred[idx])
 

@@ -5,7 +5,7 @@ import re
 
 if __name__ == "__main__":
 
-    model = YOLO("models/yolov8n.pt")  # build a new model from pretrained
+    model = YOLO("models/yolov8n.pt")
 
     results = model.train(
         data="config.yaml",
