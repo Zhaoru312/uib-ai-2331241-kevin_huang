@@ -33,3 +33,26 @@ pert 5 :
 pert 6 : 
 - sentiment analysis
 -- lstm
+
+pert 7 : 
+-- brain tumor detections
+
+pert 8 : 
+-- yolo8
+-- object detection
+
+tugas 6 : 
+-- perincian masalah 
+-- Data Understanding
+-- Data Preparation
+-- Modelling
+-- Evaluation
+-- variable yang paling mempengaruhi 
+
+uts: 
+- Fuzzy Logic-Based Expert System for Adaptive Cruise Control in cars
+- Linear Regression Design for Vehicle Fuel Efficiency Prediction
+
+uas : 
+-- yolo8
+-- Face Emotion Detection
