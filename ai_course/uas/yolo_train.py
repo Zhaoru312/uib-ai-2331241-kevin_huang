@@ -5,12 +5,14 @@ import re
 
 if __name__ == "__main__":
 
-    model = YOLO("models/yolov8n.pt")
+    model = YOLO("runs/detect/train/weights/last.pt")
 
     results = model.train(
         data="config.yaml",
         epochs=50,
+        batch=8,
         device=0,
+        resume=True,
     )
 
    # source

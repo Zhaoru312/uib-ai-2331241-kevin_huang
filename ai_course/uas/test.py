@@ -10,7 +10,7 @@ from collections import deque
 # ==========================================================
 
 # YOLO face detector
-face_model = YOLO("models/Face_detect_v1.pt")
+face_model = YOLO("models/Face_detect_v2.pt")
 
 # Emotion classifier
 emotion_model = load_model("models/emotion_model_v2.keras")
@@ -27,11 +27,6 @@ pred_buffer = deque(maxlen=7)
 # EMOTION CLASSIFIER
 # ==========================================================
 def classify_emotion(face_img):
-    if face_img is None or face_img.size == 0:
-        return "Unknown", 0.0
-
-    if face_img.shape[0] < 50 or face_img.shape[1] < 50:
-        return "Unknown", 0.0
 
     # BGR → RGB
     face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2RGB)
@@ -47,11 +42,6 @@ def classify_emotion(face_img):
 
     idx = np.argmax(smoothed_pred)
     confidence = float(smoothed_pred[idx])
-
-    # Apply confidence threshold: below 0.4 → Neutral
-    if confidence < 0.4:
-        idx = emotion_labels.index("Neutral")
-        confidence = float(smoothed_pred[idx])
 
     emotion = emotion_labels[idx]
 

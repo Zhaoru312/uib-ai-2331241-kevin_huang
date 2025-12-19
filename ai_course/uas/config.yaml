@@ -1,18 +1,9 @@
 path: C:/Users/Malv/Downloads/class/ai_lab/ai_course/uas #root
-train: yolo_dataset/train/images #training
-val: yolo_dataset/valid/images #validity
-test: yolo_dataset/test/images #testing
+train: yolo_dataset/train #training
+val: yolo_dataset/val #validity
 
 # classes
 names: 
-- device
-- live
-- mask
-- photo
+- face
 
-roboflow:
-  workspace: zongrui-liu
-  project: face-nni0m
-  version: 5
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/zongrui-liu/face-nni0m/dataset/5
+# resources dataset from WIDERface 
